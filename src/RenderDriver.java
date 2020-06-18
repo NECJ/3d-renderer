@@ -117,16 +117,16 @@ public class RenderDriver{
           case 'd': scene.getCamera().moveRightByDisplacment(0.5);
                     sceneRenderer.repaint();
                     break;
-          case 'j': scene.getCamera().changeAngleRelative(0, 0.5);
+          case 'j': scene.getCamera().changeAngleRelative(0, 0.25);
                     sceneRenderer.repaint();
                     break;
-          case 'l': scene.getCamera().changeAngleRelative(0, -0.5);
+          case 'l': scene.getCamera().changeAngleRelative(0, -0.25);
                     sceneRenderer.repaint();
                     break;
-          case 'i': scene.getCamera().changeAngleRelative(0.5, 0);
+          case 'i': scene.getCamera().changeAngleRelative(0.25, 0);
                     sceneRenderer.repaint();
                     break;
-          case 'k': scene.getCamera().changeAngleRelative(-0.5, 0);
+          case 'k': scene.getCamera().changeAngleRelative(-0.25, 0);
                     sceneRenderer.repaint();
                     break;
         }
@@ -143,7 +143,7 @@ public class RenderDriver{
         mouseLocation[0] = tempLoc[0];
         mouseLocation[1] = tempLoc[1];
         System.out.println("pitch: "+scene.getCamera().getPitch()+"Yaw: "+scene.getCamera().getYaw());
-        scene.getCamera().changeAngleRelative(e.getPoint().getY()/500.0, -e.getPoint().getX()/500.0);
+        scene.getCamera().changeAngleRelative(-e.getPoint().getY()/500.0, +e.getPoint().getX()/500.0);
         sceneRenderer.repaint();
       }
       public void mouseMoved(MouseEvent e){

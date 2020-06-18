@@ -88,7 +88,7 @@ public class Camera{
  * @since 1.0
  */
   public void moveFawardByDisplacment(double x){
-    location.setX(location.getX()-x*Math.cos(pitch)*Math.sin(yaw));
+    location.setX(location.getX()+x*Math.cos(pitch)*Math.sin(yaw));
     location.setY(location.getY()+x*Math.sin(pitch));
     location.setZ(location.getZ()+x*Math.cos(pitch)*Math.cos(yaw));
   }
@@ -99,9 +99,10 @@ public class Camera{
  * @since 1.0
  */
   public void moveRightByDisplacment(double x){
-    location.setX(location.getX()+x*Math.cos(pitch)*Math.cos(yaw));
-    location.setY(location.getY()+x*Math.sin(pitch));
-    location.setZ(location.getZ()+x*Math.cos(pitch)*Math.sin(yaw));
+    double piOver2 = Math.PI/2;
+    location.setX(location.getX()+x*Math.cos(pitch)*Math.sin(yaw+piOver2));
+    
+    location.setZ(location.getZ()+x*Math.cos(pitch)*Math.cos(yaw+piOver2));
   }
 
   /**
