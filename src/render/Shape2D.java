@@ -13,7 +13,9 @@ import matrix.*;
 
 public class Shape2D{
 
+  /** An Array List of each vertex of the shape.*/
   private ArrayList<Point> vertexes;
+  /** The color of the shape.*/
   private Color color;
 
   /**

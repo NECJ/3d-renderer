@@ -9,9 +9,13 @@ import java.lang.Math;
  */
 
 public class Point{
+  /** Represents the x coordinate.*/
   private double x;
+  /** Represents the y coordinate.*/
   private double y;
+  /** Represents the z coordinate.*/
   private double z;
+  /** Represents the coordinate in homogeneous form.*/
   private Matrix homoCoord;
 
   /**

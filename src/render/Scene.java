@@ -9,8 +9,10 @@ import java.util.ArrayList;
 
 public class Scene{
 
-  ArrayList<Shape2D> shapes2D;
-  Camera camera;
+  /** Holds the differnt shapes that are in the Scene.*/
+  private ArrayList<Shape2D> shapes2D;
+  /** The camera that is within the Scene.*/
+  private Camera camera;
 
   /**
   * Creates a Scene with a Camera location at the origin facing along the z axis.

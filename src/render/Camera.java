@@ -9,9 +9,12 @@ import java.lang.Math;
 
 public class Camera{
 
-  Point location;
-  double pitch; // rotation around x axis
-  double yaw; //rotation around y axis
+  /** Represents the location of the Camera.*/
+  private Point location;
+  /** Represents direction the Camera is looking as a rotation around x axis.*/
+  private double pitch;
+  /** Represents direction the Camera is looking as a rotation around y axis.*/
+  private double yaw;
 
   /**
  * Creates a Camera with location (0, 0, 0) facing along the z axis
@@ -101,7 +104,7 @@ public class Camera{
   public void moveRightByDisplacment(double x){
     double piOver2 = Math.PI/2;
     location.setX(location.getX()+x*Math.cos(pitch)*Math.sin(yaw+piOver2));
-    
+
     location.setZ(location.getZ()+x*Math.cos(pitch)*Math.cos(yaw+piOver2));
   }
 

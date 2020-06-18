@@ -12,9 +12,13 @@ import java.util.ArrayList;
 
 public class SceneRenderer extends JFrame{
 
+  /** The scene that is to be rendered*/
   private Scene scene;
+  /** The furthest object that is to be rendered.*/
   private double renderDistance;
+  /** The distance from the camera/eye to the screen.*/
   private double screenDistance;
+  /** The feild of view.*/
   private double fov;
 
   /**
